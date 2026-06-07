@@ -1,15 +1,28 @@
-/* Only what Bootstrap can't express */
+/* ============================================================
+   StylistInfo.css
+   Shared styles for NaomiInfo.jsx and JordanInfo.jsx.
+   Both pages use the same white card layout:
+     - Photo on the left
+     - Bio text on the right
+   On mobile the photo stacks above the text.
+   ============================================================ */
+
+/* ----- White card: max-width keeps it from stretching too wide on large screens ----- */
 .stylist-box { max-width: 800px; }
 
+/* ----- Stylist photo -----
+   aspect-ratio 3/4 keeps portrait photos correctly proportioned. */
 .stylist-photo {
     width: 240px;
     object-fit: cover;
     aspect-ratio: 3 / 4;
 }
 
-.stylist-name { font-size: var(--fs-section); color: var(--colour-black); }
+/* ----- Name heading and bio text sizes ----- */
+.stylist-name { font-size: var(--fs-section); color: var(--colour-black); } /* set in index.css */
 .stylist-bio  { font-size: var(--fs-desc); line-height: 1.85; color: #444; }
 
+/* ----- Mobile: photo stacks above text, fills full width ----- */
 @media (max-width: 640px) {
     .stylist-photo { width: 100%; }
 }

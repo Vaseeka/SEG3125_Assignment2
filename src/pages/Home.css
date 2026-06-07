@@ -1,21 +1,29 @@
-/* ----- Outer wrapper fills all space given by main ----- */
+/* ============================================================
+   Home.css
+   Styles the home page hero section.
+   The hero stretches to fill all vertical space between the
+   navbar and the footer -- no white gap appears below the image.
+   ============================================================ */
+
+/* ----- Outer wrapper: flex:1 fills remaining height given by <main> in App.jsx ----- */
 .home-wrap {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-/* ----- Hero fills remaining vertical space — no gap before footer ----- */
+/* ----- Hero: fills all space inside home-wrap ----- */
 .hero-wrap {
     position: relative;
-    flex: 1;
+    flex: 1; /* grows to fill home-wrap */
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    min-height: 320px;
+    min-height: 320px; /* minimum height on very short viewports */
 }
 
+/* ----- Background photo: covers the entire hero area ----- */
 .hero-bg {
     position: absolute;
     inset: 0;
@@ -24,6 +32,7 @@
     object-fit: cover;
 }
 
+/* ----- Dark overlay: improves text contrast over the photo ----- */
 .hero-dim {
     position: absolute;
     inset: 0;
@@ -31,7 +40,9 @@
     z-index: 1;
 }
 
-/* ----- Full-width frosted band ----- */
+/* ----- Frosted glass band: full width, only as tall as the text inside -----
+   left: 0; right: 0 stretches it edge to edge horizontally.
+   backdrop-filter creates the frosted/blurred glass look. */
 .hero-glass {
     position: absolute;
     z-index: 2;
@@ -43,17 +54,19 @@
     text-align: center;
 }
 
+/* ----- "Clip & Snip" Dancing Script title ----- */
 .hero-title {
     font-family: 'Dancing Script', cursive;
-    font-size: var(--fs-title);
+    font-size: var(--fs-title); /* set in index.css */
     color: var(--colour-black);
     margin-bottom: 0.4rem;
 }
 
+/* ----- Tagline text below the title ----- */
 .hero-sub {
-    font-size: var(--fs-desc);
+    font-size: var(--fs-desc); /* set in index.css */
     color: var(--colour-black);
     margin-bottom: 1.25rem;
 }
 
-/* ----- Book Now button (inherits .btn-salmon from Navbar.css) ----- */
+/* ----- Book Now button: inherits .btn-salmon from Navbar.css ----- */

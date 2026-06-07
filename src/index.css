@@ -1,34 +1,63 @@
+/* ============================================================
+   Google Fonts
+   Dancing Script: used for the "Clip & Snip" brand logo
+   Nunito: used for all body text, labels, and UI elements
+   ============================================================ */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;600;700;800&display=swap');
 
 /* ============================================================
-   Colour palette -- only edit here
+   DESIGN TOKENS -- edit values here to update the whole site
+   ============================================================
+
+   COLOURS
+   -------
+   To change a colour, update the hex value on the right.
+   Every component that uses that colour will update automatically.
+
+   FONT SIZES
+   ----------
+   To resize text site-wide, update the rem value on the right.
+   All components reference these variables, not hardcoded sizes.
+
    ============================================================ */
 :root {
-    --colour-white:       #ffffff;
-    --colour-off-white:   #f5f3f1;
-    --colour-black:       #222222;
-    --colour-grey-light:  #f0f0f0;
-    --colour-grey-mid:    #888888;
-    --colour-salmon:      #E8745A;
-    --colour-salmon-dark: #c45c44;
-    --colour-salmon-tint: #fef0ec;
-    --colour-salmon-burn: #c4622e;
 
-    /* Font-size scale */
-    --fs-brand:    1.85rem;
-    --fs-title:    2.8rem;
-    --fs-section:  2.1rem;
-    --fs-subtitle: 1.3rem;
-    --fs-nav:      0.95rem;
-    --fs-desc:     0.95rem;
-    --fs-footer:   0.82rem;
+    /* ----- Core neutrals ----- */
+    --colour-white:       #ffffff;  /* page backgrounds, card fills, nav bar bg             */
+    --colour-off-white:   #f5f3f1;  /* page body background, form input backgrounds         */
+    --colour-black:       #222222;  /* primary text colour throughout the site               */
+    --colour-grey-light:  #f0f0f0;  /* toggle button inactive background                    */
+    --colour-grey-mid:    #888888;  /* secondary text (descriptions, roles, muted text)      */
+
+    /* ----- Salmon brand palette ----- */
+    --colour-salmon:      #E8745A;  /* primary brand colour -- navbar bar, footer bg, buttons, team card borders, service panel */
+    --colour-salmon-dark: #c45c44;  /* hover state for all salmon buttons and links          */
+    --colour-salmon-tint: #fef0ec;  /* toggle active button background (light salmon wash)   */
+    --colour-salmon-burn: #c4622e;  /* (unused currently) deeper burnt salmon, kept as spare */
+
+    /* ----- Alert / notification ----- */
+    --colour-alert:       #8B2E2E;  /* dark burgundy red -- success banner after booking     */
+
+    /* =========================================================
+       FONT SIZE SCALE
+       ========================================================= */
+    --fs-brand:    1.85rem;  /* "Clip & Snip" logo in the navbar                            */
+    --fs-title:    2.8rem;   /* hero page title (Dancing Script) on the home page            */
+    --fs-section:  2.1rem;   /* section banner headings (Services, Team), form title, stylist name */
+    --fs-subtitle: 1.3rem;   /* card headings (hairstyle names, team member names)           */
+    --fs-nav:      0.95rem;  /* navbar links, Book Now button, toggle buttons, success banner */
+    --fs-desc:     0.95rem;  /* body descriptions, prices, form labels, hero sub-text        */
+    --fs-footer:   0.82rem;  /* all footer text (headings, body, table)                      */
 }
 
 /* ============================================================
-   Base reset
+   Base reset -- ensures consistent box model across browsers
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; }
 
+/* ============================================================
+   Body defaults -- font and background applied to every page
+   ============================================================ */
 body {
     font-family: 'Nunito', sans-serif;
     background: var(--colour-off-white);

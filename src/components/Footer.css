@@ -1,23 +1,37 @@
+/* ============================================================
+   Footer.css
+   Styles the footer shown on every page.
+   Layout is three columns (Bootstrap grid in Footer.jsx):
+     Col 1 (col-md-3): Contact info and location
+     Col 2 (col-md-5): Salon hours table
+     Col 3 (col-md-4): Decorative illustration
+   Background colour: --colour-salmon set in index.css.
+   ============================================================ */
+
+/* ----- Outer footer wrapper ----- */
 .footer-wrap {
-    background: var(--colour-salmon);
+    background: var(--colour-salmon); /* set in index.css */
     color: var(--colour-white);
-    overflow: hidden;
+    overflow: hidden; /* prevents illustration from expanding the footer */
 }
 
-/* ----- Text sizes — larger than before to fill vertical space ----- */
+/* ----- Section headings (CONTACT US, LOCATION, SALON HOURS) ----- */
 .footer-heading {
     letter-spacing: 0.06em;
     font-size: 0.88rem;
     color: var(--colour-white);
 }
 
+/* ----- Body text (phone, email, address) ----- */
 .footer-body {
     font-size: 0.85rem;
     line-height: 1.6;
     color: var(--colour-white);
-    white-space: nowrap;
+    white-space: nowrap; /* prevents phone/email wrapping to a second line */
 }
 
+/* ----- Inline SVG icons (phone + email) -----
+   fill: white as per design spec. To change colour update here. */
 .footer-icon {
     width: 14px;
     height: 14px;
@@ -26,12 +40,15 @@
     flex-shrink: 0;
 }
 
-/* ----- Hours table ----- */
+/* ----- Salon hours table -----
+   Plain <table> used intentionally -- Bootstrap's .table class injects
+   --bs-table-color which overrides our white text on salmon background. */
 .footer-hours-table {
     border-collapse: collapse;
     width: auto;
 }
 
+/* Day column (Sunday, Monday, etc.) */
 .footer-day {
     font-size: 0.85rem;
     font-weight: 400;
@@ -41,6 +58,7 @@
     padding-bottom: 2px;
 }
 
+/* Time column (9:00 AM - 5:00 PM, etc.) */
 .footer-time {
     font-size: 0.85rem;
     color: var(--colour-white);
@@ -49,21 +67,24 @@
     padding-bottom: 2px;
 }
 
-/* ----- Image column: flush to bottom ----- */
+/* ----- Illustration column -----
+   position: relative + absolute child pins the image to the bottom of the footer.
+   min-height ensures the column is tall enough for the image to show.
+   To shift image left: increase paddingRight on the col in Footer.jsx.
+   To change transparency: update opacity below. */
 .footer-img-col {
     position: relative;
     min-height: 160px;
-    align-self: stretch;
 }
 
 .footer-illustration {
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 2rem;
-    width: calc(100% - 2rem);
+    right: 7rem; /* matches paddingRight on the col in Footer.jsx */
+    width: calc(100% - 7rem);
     height: 100%;
     object-fit: contain;
     object-position: bottom center;
-    opacity: 0.75;
+    opacity: 0.35; /* lower = more transparent, higher = more opaque */
 }

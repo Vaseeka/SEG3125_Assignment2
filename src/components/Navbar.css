@@ -1,34 +1,53 @@
+/* ============================================================
+   Navbar.css
+   Styles the sticky navbar at the top of every page.
+   The navbar has two parts:
+     1. White bar (height controlled by py-* on the <nav> in Navbar.jsx)
+     2. Salmon accent line below it (height controlled by .navbar-bottom-line here)
+   ============================================================ */
+
+/* ----- Sticky wrapper: keeps white bar + pink line together at top of viewport ----- */
 .navbar-sticky-wrapper {
     position: sticky;
     top: 0;
-    z-index: 200;
+    z-index: 200; /* sits above all page content */
 }
 
+/* ----- Salmon accent bar -----
+   To change thickness: update height here.
+   To change colour: update --colour-salmon in index.css. */
 .navbar-bottom-line {
     height: 28px;
     background: var(--colour-salmon);
 }
 
+/* ----- "Clip & Snip" brand logo ----- */
 .brand-font {
     font-family: 'Dancing Script', cursive;
-    font-size: var(--fs-brand);
+    font-size: var(--fs-brand); /* set in index.css */
     color: var(--colour-black);
 }
 
+/* ----- Nav links (Home, Services, Our Team) ----- */
 .nav-link-custom {
     color: var(--colour-black);
-    font-size: var(--fs-nav);
+    font-size: var(--fs-nav); /* set in index.css */
     padding-bottom: 2px;
-    border-bottom: 3px solid transparent;
+    border-bottom: 3px solid transparent; /* invisible until active */
 }
 
+/* Hover state */
 .nav-link-custom:hover { color: var(--colour-salmon-dark); }
 
+/* Active state: salmon text + salmon underline for current page */
 .nav-link-custom.active {
     color: var(--colour-salmon);
     border-bottom: 3px solid var(--colour-salmon);
 }
 
+/* ----- "Book Now" pill button (also used by Learn More buttons on Team page) -----
+   To change colour: update --colour-salmon in index.css.
+   To change hover colour: update --colour-salmon-dark in index.css. */
 .btn-salmon {
     background-color: var(--colour-salmon);
     color: var(--colour-white);

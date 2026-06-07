@@ -1,3 +1,14 @@
+/* ============================================================
+   Team.css
+   Styles the team member cards on the Team page.
+   All cards are forced to the same height regardless of content
+   by using d-flex + h-100 on the card and align-items-stretch on the row.
+   ============================================================ */
+
+/* ----- Team card -----
+   width: 240px gives a consistent card width.
+   height: 100% makes each card fill the height of its flex parent (set by d-flex on col-auto).
+   border colour: --colour-salmon set in index.css. */
 .team-card {
     background: var(--colour-white);
     border: 5px solid var(--colour-salmon);
@@ -6,8 +17,10 @@
     height: 100%;
 }
 
+/* Hover shadow using salmon colour */
 .team-card:hover { box-shadow: 0 6px 24px rgba(232, 116, 90, 0.28); }
 
+/* ----- Card photo: fixed height, covers the area without distortion ----- */
 .team-card-img {
     width: 100%;
     height: 180px;
@@ -15,5 +28,6 @@
     border-radius: 4px;
 }
 
-.team-card-name { font-size: var(--fs-subtitle); color: var(--colour-black); }
+/* ----- Card text sizes ----- */
+.team-card-name { font-size: var(--fs-subtitle); color: var(--colour-black); } /* set in index.css */
 .team-card-role { font-size: var(--fs-desc); }
