@@ -1,0 +1,15 @@
+/* Only what Bootstrap can't express */
+.stylist-box { max-width: 800px; }
+
+.stylist-photo {
+    width: 240px;
+    object-fit: cover;
+    aspect-ratio: 3 / 4;
+}
+
+.stylist-name { font-size: var(--fs-section); color: var(--colour-black); }
+.stylist-bio  { font-size: var(--fs-desc); line-height: 1.85; color: #444; }
+
+@media (max-width: 640px) {
+    .stylist-photo { width: 100%; }
+}

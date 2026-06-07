@@ -1,0 +1,51 @@
+/* ----- Toggle ----- */
+.toggle-group { display: inline-flex; }
+
+.toggle-btn {
+    padding: 0.38rem 1.2rem;
+    font-weight: 500;
+    font-size: var(--fs-nav);
+    cursor: pointer;
+    background: var(--colour-grey-light);
+    color: var(--colour-grey-mid);
+    border: 2px solid #bbb;
+    position: relative;
+    z-index: 1;
+    transition: all 0.18s ease;
+}
+
+.toggle-btn:first-child { border-radius: 30px 8px 8px 30px; border-right: 1px solid #bbb; }
+.toggle-btn:last-child  { border-radius: 8px 30px 30px 8px; border-left:  1px solid #bbb; }
+
+.toggle-btn.on {
+    background: var(--colour-salmon-tint);
+    color: var(--colour-salmon-dark);
+    font-weight: 800;
+    border: 2.5px solid var(--colour-salmon);
+    border-radius: 30px;
+    transform: scale(1.08);
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(232, 116, 90, 0.18);
+}
+
+.toggle-btn.off { opacity: 0.75; }
+.toggle-btn.off:hover { opacity: 1; background: #e8e8e8; }
+
+/* ----- Service card image size ----- */
+.service-card-img {
+    width: 130px;
+    object-fit: cover;
+}
+
+.service-card-name  { font-size: var(--fs-subtitle); color: var(--colour-black); }
+.service-card-desc  { font-size: var(--fs-desc); }
+.service-card-price { font-size: var(--fs-desc); color: var(--colour-black); }
+
+/* ----- Info panel ----- */
+.services-panel { background: var(--colour-salmon); }
+.services-panel-heading { font-size: var(--fs-section); }
+.services-panel-desc    { font-size: var(--fs-desc); line-height: 1.75; }
+
+@media (max-width: 640px) {
+    .service-card-img { width: 100px; }
+}

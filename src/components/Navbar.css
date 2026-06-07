@@ -1,0 +1,48 @@
+.navbar-sticky-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+
+.navbar-bottom-line {
+    height: 28px;
+    background: var(--colour-salmon);
+}
+
+.brand-font {
+    font-family: 'Dancing Script', cursive;
+    font-size: var(--fs-brand);
+    color: var(--colour-black);
+}
+
+.nav-link-custom {
+    color: var(--colour-black);
+    font-size: var(--fs-nav);
+    padding-bottom: 2px;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-link-custom:hover { color: var(--colour-salmon-dark); }
+
+.nav-link-custom.active {
+    color: var(--colour-salmon);
+    border-bottom: 3px solid var(--colour-salmon);
+}
+
+.btn-salmon {
+    background-color: var(--colour-salmon);
+    color: var(--colour-white);
+    border: none;
+    border-radius: 30px;
+    padding: 0.45rem 1.5rem;
+    font-weight: 700;
+    font-size: var(--fs-nav);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-salmon:hover {
+    background-color: var(--colour-salmon-dark);
+    color: var(--colour-white);
+}

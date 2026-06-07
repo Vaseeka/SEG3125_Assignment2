@@ -1,0 +1,17 @@
+/* Only what Bootstrap can't express */
+.booking-card { max-width: 640px; }
+
+.booking-title { font-size: var(--fs-section); color: var(--colour-black); }
+
+/* Input focus ring in salmon */
+.booking-input:focus {
+    border-color: var(--colour-salmon);
+    box-shadow: 0 0 0 3px rgba(232, 116, 90, 0.15);
+    outline: none;
+}
+
+.booking-submit {
+    padding: 0.85rem;
+    border-radius: 10px;
+    font-size: var(--fs-nav);
+}

@@ -1,0 +1,41 @@
+.section-header-wrap {
+    position: relative;
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.section-header-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-header-dim {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.22);
+}
+
+/* ----- Full-width frosted band — only as tall as the text ----- */
+.section-header-glass {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(2px);
+    padding: 1rem 3rem;
+    text-align: center;
+}
+
+.section-header-title {
+    font-size: var(--fs-section);
+    font-weight: 700;
+    color: var(--colour-black);
+    margin: 0;
+}

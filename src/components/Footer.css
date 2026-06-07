@@ -1,0 +1,69 @@
+.footer-wrap {
+    background: var(--colour-salmon);
+    color: var(--colour-white);
+    overflow: hidden;
+}
+
+/* ----- Text sizes — larger than before to fill vertical space ----- */
+.footer-heading {
+    letter-spacing: 0.06em;
+    font-size: 0.88rem;
+    color: var(--colour-white);
+}
+
+.footer-body {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--colour-white);
+    white-space: nowrap;
+}
+
+.footer-icon {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    fill: var(--colour-white);
+    flex-shrink: 0;
+}
+
+/* ----- Hours table ----- */
+.footer-hours-table {
+    border-collapse: collapse;
+    width: auto;
+}
+
+.footer-day {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--colour-white);
+    white-space: nowrap;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.footer-time {
+    font-size: 0.85rem;
+    color: var(--colour-white);
+    white-space: nowrap;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+/* ----- Image column: flush to bottom ----- */
+.footer-img-col {
+    position: relative;
+    min-height: 160px;
+    align-self: stretch;
+}
+
+.footer-illustration {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 2rem;
+    width: calc(100% - 2rem);
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom center;
+    opacity: 0.75;
+}

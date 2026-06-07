@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;600;700;800&display=swap');
+
+/* ============================================================
+   Colour palette -- only edit here
+   ============================================================ */
+:root {
+    --colour-white:       #ffffff;
+    --colour-off-white:   #f5f3f1;
+    --colour-black:       #222222;
+    --colour-grey-light:  #f0f0f0;
+    --colour-grey-mid:    #888888;
+    --colour-salmon:      #E8745A;
+    --colour-salmon-dark: #c45c44;
+    --colour-salmon-tint: #fef0ec;
+    --colour-salmon-burn: #c4622e;
+
+    /* Font-size scale */
+    --fs-brand:    1.85rem;
+    --fs-title:    2.8rem;
+    --fs-section:  2.1rem;
+    --fs-subtitle: 1.3rem;
+    --fs-nav:      0.95rem;
+    --fs-desc:     0.95rem;
+    --fs-footer:   0.82rem;
+}
+
+/* ============================================================
+   Base reset
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--colour-off-white);
+    color: var(--colour-black);
+    margin: 0;
+}

@@ -1,0 +1,14 @@
+.success-banner {
+    background: var(--colour-salmon-burn);
+    color: var(--colour-white);
+    font-size: var(--fs-nav);
+}
+
+.success-icon {
+    width: 22px;
+    height: 22px;
+    fill: var(--colour-white);
+    flex-shrink: 0;
+}
+
+.success-close { cursor: pointer; font-size: 1.1rem; }
