@@ -1,13 +1,11 @@
 import './StylistInfo.css';
 
 // ----- NaomiInfo -----
-// Profile page for Naomi Courtoise, reached from the Team page "Learn More" button.
-// Layout: photo on the left, bio text on the right, wrapped in a white card.
-// On mobile (max-width 640px) the photo stacks above the text (see StylistInfo.css).
-// Photo: place naomi.jpg in public/images/
+// Profile page for Naomi Courtoise, reached from the Team page "Learn More" button
+// Layout: photo on the left, bio text on the right, wrapped in a white card
 function NaomiInfo() {
     return (
-        // bg-light py-4 px-3 -- off-white page background with breathing room
+        // Off-white page background
         <div className="bg-light py-4 px-3">
 
             {/* White card: d-flex lays photo and text side by side on desktop */}
@@ -20,12 +18,13 @@ function NaomiInfo() {
                 <div>
                     <h2 className="fw-bold mb-3 stylist-name">Meet Naomi Courtoise</h2>
                     <p className="stylist-bio">
-                        Naomi has been working with Clip &amp; Snip for over 10 years. She's
-                        experienced in all sorts of trendy haircuts, especially for young girls
-                        all the way to older women, short or long! She's passionate about her
-                        job and enjoys chatting while working to make the experience as relaxed
-                        as possible. Customers who've had a haircut from her always leave a
-                        glowing review about her services!
+                        Naomi has been a hairstylist for over 10 years and has been part of the
+                        Clip &amp; Snip team since the salon first opened. She specializes in long
+                        layered cuts and elegant styling for special occasions. Known for her 
+                        friendly personality and attentive approach, Naomi takes the time to 
+                        understand each client's vision and help them achieve a look they love. 
+                        Her clients often recommend her for her professionalism, creativity, 
+                        and consistently excellent results.
                     </p>
                 </div>
 

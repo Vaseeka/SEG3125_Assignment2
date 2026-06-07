@@ -3,10 +3,9 @@ import SectionHeader from '../components/SectionHeader';
 import './Team.css';
 
 // ----- Team member data -----
-// To update a team member, edit their entry here.
+// To update a team member, edit their entry here
 // linkTo: routes to an internal profile page (/team/naomi, /team/jordan)
-// external: opens a URL in a new tab (used for Vaseeka's portfolio)
-// img: place photos in public/images/ with the exact filename listed below
+// external: opens a URL in a new tab (used for portfolio)
 const MEMBERS = [
     {
         key:    'naomi',
@@ -33,9 +32,9 @@ const MEMBERS = [
 ];
 
 // ----- Team -----
-// Displays three equal-height cards for each team member.
-// Naomi and Jordan route to internal profile pages on "Learn More".
-// Vaseeka opens an external portfolio link.
+// Displays three equal-height cards for each team member
+// Naomi and Jordan route to internal profile pages on "Learn More"
+// Vaseeka opens my portfolio website
 function Team() {
     return (
         <div>
@@ -44,8 +43,8 @@ function Team() {
 
             <div className="container py-5">
                 {/* ----- Team card grid -----
-                    align-items-stretch + d-flex on each col forces all cards to the same height.
-                    justify-content-center keeps the row centred regardless of how many cards there are. */}
+                    align-items-stretch + d-flex on each col forces all cards to the same height
+                    justify-content-center keeps the row centred regardless of how many cards there are */}
                 <div className="row justify-content-center g-4 align-items-stretch">
                     {MEMBERS.map((member) => (
                         // col-auto d-flex so the card inside can use h-100 for equal heights

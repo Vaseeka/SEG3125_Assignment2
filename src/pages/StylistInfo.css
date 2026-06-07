@@ -1,17 +1,16 @@
 /* ============================================================
    StylistInfo.css
-   Shared styles for NaomiInfo.jsx and JordanInfo.jsx.
+   Shared styles for NaomiInfo.jsx and JordanInfo.jsx
    Both pages use the same white card layout:
      - Photo on the left
      - Bio text on the right
-   On mobile the photo stacks above the text.
    ============================================================ */
 
 /* ----- White card: max-width keeps it from stretching too wide on large screens ----- */
 .stylist-box { max-width: 800px; }
 
 /* ----- Stylist photo -----
-   aspect-ratio 3/4 keeps portrait photos correctly proportioned. */
+   aspect-ratio 3/4 keeps portrait photos correctly proportioned */
 .stylist-photo {
     width: 240px;
     object-fit: cover;

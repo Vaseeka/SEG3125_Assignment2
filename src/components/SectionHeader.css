@@ -1,8 +1,9 @@
 /* ============================================================
    SectionHeader.css
-   Styles the banner shown at the top of Services and Team pages.
+   Styles the banner shown at the top of Services and Team pages
    The banner is a background photo with a dark overlay and a
-   frosted glass band stretching full width across the middle.
+   frosted glass band (transparent white overlay) stretching full 
+   width across the middle
    ============================================================ */
 
 /* ----- Outer container: positions children relative to itself ----- */
@@ -32,8 +33,8 @@
 }
 
 /* ----- Frosted glass band: full width, vertically centred, only as tall as text -----
-   left: 0; right: 0 makes it stretch edge to edge horizontally.
-   backdrop-filter creates the frosted/blurred glass effect. */
+   left: 0; right: 0 makes it stretch edge to edge horizontally
+   backdrop-filter creates the frosted/blurred glass effect */
 .section-header-glass {
     position: absolute;
     z-index: 2;

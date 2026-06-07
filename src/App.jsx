@@ -16,8 +16,8 @@ import Booking    from './pages/Booking';
 
 function App() {
     // ----- Success banner state -----
-    // showSuccess is set to true when the booking form is submitted.
-    // It auto-dismisses after 6 seconds, or can be closed manually.
+    // showSuccess is set to true when the booking form is submitted
+    // It auto-dismisses after 6 seconds, or can be closed manually
     const [showSuccess, setShowSuccess] = useState(false);
 
     const handleBooked = () => {
@@ -38,8 +38,8 @@ function App() {
             )}
 
             {/* ----- Page content area -----
-                flex: 1 makes this grow to fill remaining height between navbar and footer.
-                display: flex + flexDirection: column allows HomePage hero to stretch to fill it. */}
+                flex: 1 makes this grow to fill remaining height between navbar and footer
+                display: flex + flexDirection: column allows HomePage hero to stretch to fill it */}
             <main style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
                 <Routes>
                     {/* Home page */}

@@ -3,16 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import './Booking.css';
 
 // ----- Dropdown option lists -----
-// To add a new hairstyle or time slot, add a string to the relevant array.
+// To add a new hairstyle or time slot, add a string to the relevant array
 const HAIRSTYLES   = ['Buzz Cut - $10', 'Fade Cut - $15', 'Crew Cut - $12', 'Layered Cut - $20', 'Bob Cut - $18', 'Pixie Cut - $15'];
 const HAIRDRESSERS = ['Naomi Courtoise', 'Jordan Hogger'];
 const TIMES        = ['9:00 AM - 10:00 AM', '10:00 AM - 11:00 AM', '11:00 AM - 12:00 PM', '12:00 PM - 1:00 PM', '1:00 PM - 2:00 PM', '2:00 PM - 3:00 PM', '3:00 PM - 4:00 PM', '4:00 PM - 5:00 PM', '5:00 PM - 6:00 PM'];
 
 // ----- Field component -----
-// Reusable form field that renders either a <select> dropdown or a text <input>.
-// IMPORTANT: This must be defined OUTSIDE the Booking component.
-// If it were inside, React would treat it as a new component type on every re-render,
-// unmounting and remounting the input on each keystroke (causing the 1-letter bug).
+// Reusable form field that renders either a <select> dropdown or a text <input>
 // Props:
 //   label   -- the label text shown above the field
 //   fkey    -- the key in the form state object (e.g. 'firstName')
@@ -28,7 +25,7 @@ function Field({ label, fkey, type, opts, value, error, onChange }) {
             <label className="form-label fw-semibold">{label}</label>
 
             {opts ? (
-                // Dropdown (form-select is Bootstrap's styled <select>)
+                // Dropdown menu
                 <select
                     className={`form-select booking-input ${error ? 'is-invalid' : ''}`}
                     value={value}
@@ -38,7 +35,7 @@ function Field({ label, fkey, type, opts, value, error, onChange }) {
                     {opts.map((o) => <option key={o}>{o}</option>)}
                 </select>
             ) : (
-                // Text / email / date / tel input
+                // Text / email / date / phone number input
                 <input
                     className={`form-control booking-input ${error ? 'is-invalid' : ''}`}
                     type={type || 'text'}
@@ -54,31 +51,30 @@ function Field({ label, fkey, type, opts, value, error, onChange }) {
 }
 
 // ----- Booking -----
-// Appointment booking form. All fields are validated on submit.
-// On successful submission: calls onBooked() (shows success banner) then navigates to home.
-// Form data is intentionally not stored -- this is a UI demo only.
+// Appointment booking form. All fields are validated on submit
+// On successful submission: calls onBooked() (shows success banner) then navigates to home
 // Props:
-//   onBooked -- callback fired after successful form submission
+//   onBooked -- callback after successful form submission
 function Booking({ onBooked }) {
     const navigate = useNavigate();
 
     // ----- Form state -----
-    // One key per form field. All start empty.
+    // One key per form field. Starts empty
     const [form, setForm] = useState({
         hairstyle: '', hairdresser: '', date: '', time: '',
         firstName: '', lastName: '', email: '', phone: '',
     });
 
     // ----- Error state -----
-    // Populated by validate() on submit. Each key matches a form field.
+    // Populated by validate() on submit. Each key matches a form field
     const [errors, setErrors] = useState({});
 
     // Updates a single field in form state without touching other fields
     const setField = (key, value) => setForm(prev => ({ ...prev, [key]: value }));
 
     // ----- Validation -----
-    // Returns an object of error messages keyed by field name.
-    // If the object is empty, all fields are valid.
+    // Returns an object of error messages keyed by field name
+    // If the object is empty, all fields are valid
     const validate = () => {
         const e = {};
         if (!form.hairstyle)                                   e.hairstyle   = 'Please select a hairstyle.';
@@ -93,8 +89,8 @@ function Booking({ onBooked }) {
     };
 
     // ----- Submit handler -----
-    // Validates all fields; if any errors, shows them inline.
-    // If valid, fires onBooked() and navigates back to home.
+    // Validates all fields; if any errors, shows them inline
+    // If valid, fires onBooked() and navigates back to home
     const handleSubmit = () => {
         const e = validate();
         if (Object.keys(e).length > 0) { setErrors(e); return; }
@@ -103,8 +99,8 @@ function Booking({ onBooked }) {
     };
 
     return (
-        // d-flex justify-content-center centres the card horizontally
-        // py-5 my-3 adds space above and below, separating it from navbar and footer
+        // Centres the card horizontally
+        // Adds space above and below, separating it from navbar and footer
         <div className="d-flex justify-content-center py-5 px-3 my-3">
 
             {/* White card with Bootstrap shadow and rounded corners */}

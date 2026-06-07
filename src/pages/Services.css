@@ -1,6 +1,6 @@
 /* ============================================================
    Services.css
-   Styles the Services page: toggle buttons, service cards, info panel.
+   Styles the Services page: toggle buttons, service cards, info panel
    ============================================================ */
 
 /* ----- Toggle button container: two buttons joined at the centre ----- */
@@ -47,9 +47,9 @@
 .toggle-btn.off:hover { opacity: 1; background: #e8e8e8; }
 
 /* ----- Services row -----
-   Single flex row containing all four items: three cards + the info panel.
-   All items share equal width (flex: 1 1 0) and the same stretch height.
-   flex-wrap lets items spill onto a second row at smaller viewport widths. */
+   Single flex row containing all four items: three cards + the info panel
+   All items share equal width (flex: 1 1 0) and the same stretch height
+   flex-wrap lets items spill onto a second row at smaller viewport widths */
 .services-row {
     display: flex;
     flex-wrap: wrap;
@@ -58,10 +58,10 @@
 }
 
 /* ----- Service card -----
-   Each card is a narrow vertical column.
-   flex: 1 1 0 makes all four items (cards + panel) share the row equally.
-   min-height: 420px makes the card tall enough for a true 50-50 image/text split.
-   min-width: 160px keeps cards readable; at 2× that Bootstrap wraps them. */
+   Each card is a narrow vertical column
+   flex: 1 1 0 makes all four items (cards + panel) share the row equally
+   min-height: 420px makes the card tall enough for a true 50-50 image/text split
+   min-width: 160px keeps cards readable; at 2× that Bootstrap wraps them */
 .service-card {
     flex: 1 1 0;
     min-width: 160px;
@@ -69,8 +69,8 @@
 }
 
 /* ----- Service card image -----
-   Takes up exactly half the card height (50%) so image and text share equal space.
-   object-fit: cover keeps the image centred and cropped without distortion. */
+   Takes up exactly half the card height (50%) so image and text share equal space
+   object-fit: cover keeps the image centred and cropped without distortion */
 .service-card-img {
     height: 50%;
     object-fit: cover;
@@ -82,7 +82,7 @@
 .service-card-price { font-size: var(--fs-desc); color: var(--colour-black); }
 
 /* ----- Info panel (salmon-coloured box sharing the same row as the cards) -----
-   flex: 1 1 0 gives it the same base width as each card; it grows to fill equally. */
+   flex: 1 1 0 gives it the same base width as each card; it grows to fill equally */
 .services-panel {
     background: var(--colour-salmon);
     flex: 1 1 0;
@@ -92,7 +92,7 @@
 .services-panel-desc    { font-size: var(--fs-desc); line-height: 1.75; }
 
 /* ----- Medium screens: wrap to two items per row -----
-   Below 768 px the four items are too narrow; allow two per row instead. */
+   Below 768 px the four items are too narrow; allow two per row instead */
 @media (max-width: 768px) {
     .service-card,
     .services-panel { flex: 1 1 calc(50% - 0.5rem); } /* two items per row */
@@ -102,6 +102,6 @@
 @media (max-width: 480px) {
     .service-card,
     .services-panel { flex: 1 1 100%; }         /* full width, stacked */
-    .service-card   { min-height: 380px; }       /* slightly shorter is fine at full width */
-    .service-card-img { height: 50%; }           /* maintain 50-50 split at full width */
+    .service-card   { min-height: 380px; }      /* slightly shorter is fine at full width */
+    .service-card-img { height: 50%; }          /* maintain 50-50 split at full width */
 }

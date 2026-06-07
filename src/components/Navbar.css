@@ -1,12 +1,12 @@
 /* ============================================================
    Navbar.css
-   Styles the sticky navbar at the top of every page.
+   Styles the sticky navbar at the top of every page
    The navbar has two parts:
      1. White bar (height controlled by py-* on the <nav> in Navbar.jsx)
      2. Salmon accent line below it (height controlled by .navbar-bottom-line here)
    ============================================================ */
 
-/* ----- Sticky wrapper: keeps white bar + pink line together at top of viewport ----- */
+/* ----- Sticky wrapper: keeps white bar + pink sections together at top of viewport ----- */
 .navbar-sticky-wrapper {
     position: sticky;
     top: 0;
@@ -14,8 +14,8 @@
 }
 
 /* ----- Salmon accent bar -----
-   To change thickness: update height here.
-   To change colour: update --colour-salmon in index.css. */
+   To change thickness: update height here
+   To change colour: update --colour-salmon in index.css */
 .navbar-bottom-line {
     height: 28px;
     background: var(--colour-salmon);
@@ -46,8 +46,8 @@
 }
 
 /* ----- "Book Now" pill button (also used by Learn More buttons on Team page) -----
-   To change colour: update --colour-salmon in index.css.
-   To change hover colour: update --colour-salmon-dark in index.css. */
+   To change colour: update --colour-salmon in index.css
+   To change hover colour: update --colour-salmon-dark in index.css */
 .btn-salmon {
     background-color: var(--colour-salmon);
     color: var(--colour-white);

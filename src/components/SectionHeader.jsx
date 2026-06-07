@@ -1,12 +1,12 @@
 import './SectionHeader.css';
 
 // ----- SectionHeader -----
-// Reusable banner used at the top of the Services and Team pages.
+// Reusable banner used at the top of the Services and Team pages
 // Props:
 //   title -- the heading text shown in the frosted band
-//   image -- path to the background photo (e.g. "/images/services.jpg")
+//   image -- path to the background photo
 // The frosted band stretches full width horizontally and is only
-// as tall as the text inside it, with the background image showing above and below.
+// as tall as the text inside it, with the background image showing above and below
 function SectionHeader({ title, image }) {
     return (
         <div className="section-header-wrap">

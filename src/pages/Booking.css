@@ -1,7 +1,6 @@
 /* ============================================================
    Booking.css
-   Styles the appointment booking form page.
-   Most layout is handled by Bootstrap utilities in Booking.jsx.
+   Styles the appointment booking form page
    ============================================================ */
 
 /* ----- White card: max-width prevents it from stretching too wide ----- */
@@ -10,8 +9,8 @@
 /* ----- Form title ----- */
 .booking-title { font-size: var(--fs-section); color: var(--colour-black); } /* set in index.css */
 
-/* ----- Input focus ring: salmon colour instead of Bootstrap's default blue -----
-   Triggered when the user clicks into any form field. */
+/* ----- Input focus ring: overide Bootstrap's default colour -----
+   Triggered when the user clicks into any form field */
 .booking-input:focus {
     border-color: var(--colour-salmon);
     box-shadow: 0 0 0 3px rgba(232, 116, 90, 0.15);

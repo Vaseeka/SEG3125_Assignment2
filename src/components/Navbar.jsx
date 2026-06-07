@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
 // ----- Navigation links -----
-// Add or remove entries here to change which links appear in the navbar.
+// Add or remove entries here to change which links appear in the navbar
 const NAV_LINKS = [
     { label: 'Home',     path: '/'         },
     { label: 'Services', path: '/services' },
@@ -13,8 +13,7 @@ function Navbar() {
     const { pathname } = useLocation();
 
     // ----- Active page detection -----
-    // Highlights the current page link with a salmon underline.
-    // The team check also covers /team/naomi and /team/jordan sub-pages.
+    // Highlights the current page link with a salmon underline
     const isActive = (path) => {
         if (path === '/team') return pathname === '/team' || pathname.startsWith('/team/');
         return pathname === path;

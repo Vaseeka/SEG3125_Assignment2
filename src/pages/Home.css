@@ -1,8 +1,8 @@
 /* ============================================================
    Home.css
-   Styles the home page hero section.
+   Styles the home page hero section
    The hero stretches to fill all vertical space between the
-   navbar and the footer -- no white gap appears below the image.
+   navbar and the footer -- no white gap appears below the image
    ============================================================ */
 
 /* ----- Outer wrapper: flex:1 fills remaining height given by <main> in App.jsx ----- */
@@ -41,8 +41,8 @@
 }
 
 /* ----- Frosted glass band: full width, only as tall as the text inside -----
-   left: 0; right: 0 stretches it edge to edge horizontally.
-   backdrop-filter creates the frosted/blurred glass look. */
+   left: 0; right: 0 stretches it edge to edge horizontally
+   backdrop-filter creates the frosted/blurred glass look */
 .hero-glass {
     position: absolute;
     z-index: 2;

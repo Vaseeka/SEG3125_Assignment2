@@ -5,8 +5,8 @@ import './Footer.css';
 // Three-column layout:
 //   Col 1 (col-md-3): Contact info and location
 //   Col 2 (col-md-5): Salon opening hours table
-//   Col 3 (col-md-4): Decorative barber illustration, flush to bottom
-// Horizontal position of text cols: adjust paddingLeft inline style values.
+//   Col 3 (col-md-4): Footer image flush with bottom edge
+// Horizontal position of text cols: adjust paddingLeft
 // Image transparency: adjust opacity in Footer.css .footer-illustration
 function Footer() {
     return (
@@ -21,7 +21,7 @@ function Footer() {
                     <div className="col-12 col-md-3 d-flex flex-column align-self-start ps-6 pe-3 py-4" style={{ paddingLeft: '9rem' }}>
                         <p className="footer-heading fw-bold mb-2">CONTACT US</p>
 
-                        {/* Phone -- SVG icon inline so fill colour can be set via CSS */}
+                        {/* Phone */}
                         <p className="footer-body mb-1">
                             <svg className="footer-icon me-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
@@ -42,8 +42,7 @@ function Footer() {
                     </div>
 
                     {/* ----- Col 2: Salon Hours ----- */}
-                    {/* paddingLeft controls horizontal position -- matches Col 1 value */}
-                    {/* Plain <table> used (not Bootstrap .table) to avoid colour overrides */}
+                    {/* paddingLeft controls horizontal position */}
                     <div className="col-12 col-md-5 align-self-start ps-5 pe-3 py-4" style={{ paddingLeft: '9rem' }}>
                         <p className="footer-heading fw-bold mb-2">SALON HOURS</p>
                         <table className="footer-hours-table">
@@ -60,8 +59,8 @@ function Footer() {
                     </div>
 
                     {/* ----- Col 3: Illustration ----- */}
-                    {/* p-0 so no Bootstrap gutters clip the image */}
-                    {/* paddingRight shifts the image leftward from the right edge */}
+                    {/* p-0 so image isn't clipped */}
+                    {/* paddingRight shifts the image left */}
                     {/* Image transparency set in Footer.css .footer-illustration opacity */}
                     <div className="col-12 col-md-4 p-0 footer-img-col" style={{ paddingRight: '7rem' }}>
                         <img src="/images/footer.png" alt="" className="footer-illustration" />

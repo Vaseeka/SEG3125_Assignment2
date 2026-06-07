@@ -6,19 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;600;700;800&display=swap');
 
 /* ============================================================
-   DESIGN TOKENS -- edit values here to update the whole site
-   ============================================================
-
-   COLOURS
-   -------
-   To change a colour, update the hex value on the right.
-   Every component that uses that colour will update automatically.
-
-   FONT SIZES
-   ----------
-   To resize text site-wide, update the rem value on the right.
-   All components reference these variables, not hardcoded sizes.
-
+   DESIGN TOKENS -- update variables (for colours/fonts) here
    ============================================================ */
 :root {
 
@@ -33,7 +21,6 @@
     --colour-salmon:      #E8745A;  /* primary brand colour -- navbar bar, footer bg, buttons, team card borders, service panel */
     --colour-salmon-dark: #c45c44;  /* hover state for all salmon buttons and links          */
     --colour-salmon-tint: #fef0ec;  /* toggle active button background (light salmon wash)   */
-    --colour-salmon-burn: #c4622e;  /* (unused currently) deeper burnt salmon, kept as spare */
 
     /* ----- Alert / notification ----- */
     --colour-alert:       #8B2E2E;  /* dark burgundy red -- success banner after booking     */
@@ -42,12 +29,12 @@
        FONT SIZE SCALE
        ========================================================= */
     --fs-brand:    1.85rem;  /* "Clip & Snip" logo in the navbar                            */
-    --fs-title:    2.8rem;   /* hero page title (Dancing Script) on the home page            */
-    --fs-section:  2.1rem;   /* section banner headings (Services, Team), form title, stylist name */
-    --fs-subtitle: 1.3rem;   /* card headings (hairstyle names, team member names)           */
+    --fs-title:    3.0rem;   /* hero page title (Dancing Script) on the home page            */
+    --fs-section:  2.5rem;   /* section banner headings (Services, Team), form title, stylist name */
+    --fs-subtitle: 1.5rem;   /* card headings (hairstyle names, team member names)           */
     --fs-nav:      0.95rem;  /* navbar links, Book Now button, toggle buttons, success banner */
     --fs-desc:     0.95rem;  /* body descriptions, prices, form labels, hero sub-text        */
-    --fs-footer:   0.82rem;  /* all footer text (headings, body, table)                      */
+    --fs-footer:   0.95rem;  /* all footer text (headings, body, table)                      */
 }
 
 /* ============================================================

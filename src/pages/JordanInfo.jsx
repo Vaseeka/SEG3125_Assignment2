@@ -1,13 +1,11 @@
 import './StylistInfo.css';
 
 // ----- JordanInfo -----
-// Profile page for Jordan Hogger, reached from the Team page "Learn More" button.
-// Layout: photo on the left, bio text on the right, wrapped in a white card.
-// On mobile (max-width 640px) the photo stacks above the text (see StylistInfo.css).
-// Photo: place jordan.png in public/images/
+// Profile page for Jordan Hogger, reached from the Team page "Learn More" button
+// Layout: photo on the left, bio text on the right, wrapped in a white card
 function JordanInfo() {
     return (
-        // bg-light py-4 px-3 -- off-white page background with breathing room
+        // Off-white page background
         <div className="bg-light py-4 px-3">
 
             {/* White card: d-flex lays photo and text side by side on desktop */}
