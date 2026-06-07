@@ -19,7 +19,7 @@ function SuccessBanner({ onClose }) {
             <span>Appointment successfully created!</span>
 
             {/* ms-auto pushes the close button all the way to the right */}
-            <button className="success-close ms-auto border-0 bg-transparent text-white" onClick={onClose} aria-label="Close">
+            <button className="success-close ms-auto border-0 bg-transparent" onClick={onClose} aria-label="Close">
                 ✕
             </button>
         </div>

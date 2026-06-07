@@ -8,10 +8,10 @@
 /* ----- Team card -----
    width: 240px gives a consistent card width
    height: 100% makes each card fill the height of its flex parent (set by d-flex on col-auto)
-   border colour: --colour-salmon set in index.css */
+   border colour: --colour-salmon-bg set in index.css */
 .team-card {
     background: var(--colour-white);
-    border: 5px solid var(--colour-salmon);
+    border: 5px solid var(--colour-salmon-bg);
     border-radius: 6px;
     width: 240px;
     height: 100%;

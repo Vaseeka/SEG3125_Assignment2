@@ -84,7 +84,7 @@
 /* ----- Info panel (salmon-coloured box sharing the same row as the cards) -----
    flex: 1 1 0 gives it the same base width as each card; it grows to fill equally */
 .services-panel {
-    background: var(--colour-salmon);
+    background: var(--colour-salmon-bg);
     flex: 1 1 0;
     min-width: 160px;
 }

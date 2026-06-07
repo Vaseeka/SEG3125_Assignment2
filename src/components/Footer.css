@@ -5,12 +5,12 @@
      Col 1 (col-md-3): Contact info and location
      Col 2 (col-md-5): Salon hours table
      Col 3 (col-md-4): Footer image
-   Background colour: --colour-salmon set in index.css
+   Background colour: --colour-salmon-bg set in index.css
    ============================================================ */
 
 /* ----- Outer footer wrapper ----- */
 .footer-wrap {
-    background: var(--colour-salmon);
+    background: var(--colour-salmon-bg);
     color: var(--colour-white);
     overflow: hidden; /* prevents footer image from increasing footer height */
 }
@@ -27,7 +27,6 @@
     font-size: 0.85rem;
     line-height: 1.6;
     color: var(--colour-white);
-    white-space: nowrap; /* keeps phone/email info to one line */
 }
 
 /* ----- Icons (phone + email) -----

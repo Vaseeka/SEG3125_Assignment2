@@ -18,12 +18,13 @@
     --colour-grey-mid:    #888888;  /* secondary text (descriptions, roles, muted text)      */
 
     /* ----- Salmon brand palette ----- */
-    --colour-salmon:      #E8745A;  /* primary brand colour -- navbar bar, footer bg, buttons, team card borders, service panel */
+    --colour-salmon:      #af3f26 ;  /* secondary brand colour -- buttons */
+    --colour-salmon-bg:   #e8745a;  /* primary brand colour -- navbar bar, footer bg, service panel, team card borders */
     --colour-salmon-dark: #c45c44;  /* hover state for all salmon buttons and links          */
     --colour-salmon-tint: #fef0ec;  /* toggle active button background (light salmon wash)   */
 
     /* ----- Alert / notification ----- */
-    --colour-alert:       #8B2E2E;  /* dark burgundy red -- success banner after booking     */
+    --colour-alert:       #ffa791;  /* dark burgundy red -- success banner after booking     */
 
     /* =========================================================
        FONT SIZE SCALE

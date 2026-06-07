@@ -15,10 +15,10 @@
 
 /* ----- Salmon accent bar -----
    To change thickness: update height here
-   To change colour: update --colour-salmon in index.css */
+   To change colour: update --colour-salmon-bg in index.css */
 .navbar-bottom-line {
     height: 28px;
-    background: var(--colour-salmon);
+    background: var(--colour-salmon-bg);
 }
 
 /* ----- "Clip & Snip" brand logo ----- */
